@@ -1,0 +1,446 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>parti2</title>
+    <link rel="stylesheet" type="text/css" href="css/all.css">
+    <link rel="stylesheet" href="source/aos-next/aos.css">
+    <style>
+        body{background: rgba(0,0,0); color: wheat; background-attachment: fixed;} 
+        .block{position: fixed; background-color: black; z-index: 20; height: 20vh; width: 215vh; margin-top: -20px; margin-left: -10px;}
+        .video video{position: absolute;top: 0px; opacity: 0.4; width: 198vh ; background-size: contain;z-index: 0; left: 40px;}
+        .liens ul{display: flex; gap: 60px; position: absolute; top: 10px; left: 370px; list-style: none;}
+        .titre h1{position: absolute; left: 100px; top: -10px; color: white;}
+        .icons ul{position: absolute; top: 10px; left: 1090px; display: flex; gap: 20px; list-style: none; }
+        .icons a{background-color: blue;}
+        .icons a{color: white;}
+        .liens a{text-decoration: none; color: white; z-index: 100px;}
+        .message samp{position: absolute; top: 200px; left: 35%; font-size: 27px; font-weight: bold; font-variant:small-caps ;
+        color: rgb(175, 168, 168);
+        }
+        .message{margin-left: -10px;}
+        .message h2{position: absolute; top: 200px; left: 0%;font-size: 45px;text-transform: uppercase;color: #eee;}
+        .liensOR ul{position: absolute; top: 400px; left: 550px; font-size: 22px; display: flex; gap: 35px; 
+        list-style: none;z-index: 200;
+        }
+        .liensOR a{text-decoration: none; color: #eee; z-index: 200;}
+        .liensOR{margin-left: -35px;}
+        .arrangement{background: black; width: 204vh; height: 85vh;position: absolute; top: 590px;}
+        hr{margin-top: 230px; margin-left: 70px;}
+        .arrangement h1{position: absolute; left: 590px; color: white;}
+        .texte1{position: absolute; left: 270px; top: 40px; font-size: 20px; color: gray;  }
+        .texte1 button{position: absolute; top: 80px; left: 470px; width: 40%; padding: 20px; background-color: orangered;border-top-left-radius: 40px; border-bottom-right-radius: 40px;}
+        .arrangement h2{text-align: center; color: white;}
+        .texte2{text-align: center; margin-left: -140px; font-size: 20px; color: #eee;}
+        .apprendre{background-color: antiquewhite; height: 50vh; width: 213vh; position: absolute; top: 1100px; margin-left: -8px;}
+        .apprendre h2{color: black; line-height: 10px;position: absolute; left: 150px; top: 60px; font-size: 25px; font-variant: small-caps;}
+    .apprendre p{color: #333; font-size: 17px; font-weight: bold; font-style: oblique; position: absolute; top: 80px;
+    left: 0px;
+    }
+    .image{display: flex; gap: 40px; position: absolute; right: 30px;}
+    .nameIMAGE1{background: #333; height: 12vh; width: 200px;position: absolute; right: 270px; top: 240px;}
+    .nameIMAGE1 i{position: absolute; left: 165px; color: white;}
+    .nameIMAGE2{background: #333; height: 12vh; width: 200px;position: absolute; right: 30px; top: 240px;}
+    .nameIMAGE2 i{position: absolute; left: 165px; color: white;}
+    .talent{
+        margin-left: -10px;
+        width: 100%;  
+        opacity: 0.3px;
+    }
+    .talent div{
+        background-color: #221e1e;
+        width: 350px;
+        height: 25vh;
+    }
+    .talent img{
+        color: gray;
+        font-weight: bold;
+        font-size: 18px;
+        letter-spacing: 5px;
+       
+    }
+    .talent .T2{
+        position: absolute; left: 500px ;top: 152px;
+    }
+    .talent .T3{
+        position: absolute; left: 1000px ;top: 152px; 
+    }
+    .talent .box{
+        width: 40px;
+        height: 5vh;
+        background-color: orange;
+        text-align: center;
+        color: #221e1e;
+        border-radius: 20%;
+        position: absolute; top: 0;left: 49vh;
+
+    }
+    .talent pre{
+        background-color: #eee;
+    }
+    .tableau{
+        width: 100%;
+        height: 75vh;
+        position: absolute;top: 1723px;
+        color: #eee;
+        
+    }
+    .tableau table{
+        border-collapse: collapse;
+        position: absolute;
+        left: 300px;
+        
+    }
+    .tableau th,td
+        {
+            padding: 20px;
+            
+    }
+    .tableau th{
+        background-color: blue;
+    }
+    .tableau caption{
+        font-size: 22px;
+        text-shadow: 4px 2px 5px rgb(247, 4, 4);
+    }
+    .formulaire{
+        position: absolute;
+        top: 2290px;
+        background-color: #ffffff;
+        width: 100%;
+        z-index: 100px;
+    }
+    .formulaire input{
+        display: flex;
+        margin-top: 20px;
+        padding: 20px;
+        color: #333;
+        font-size: large;
+    }
+    .formulaire textarea{
+        margin-top: 20px;
+        color: #333;
+        font-size: large;
+        background-color: darkblue;opacity: 0.7;
+        border-top-right-radius: 50%;
+    }
+    .formulaire textarea:hover{
+        background-color: #ffffff;
+        color: darkblue;
+    }
+    .formulaire button{
+        padding: 13px;
+        width: 565px;
+        margin-top: 10px;
+        border: none;
+        background-color: #000;
+        color: white;
+    }
+    .formulaire button:hover{
+        background-color: blue;
+        width: 565px;
+        font-variant: small-caps;
+        
+    }
+    .formulaire h2{
+        position: absolute;
+        top: -5px;
+        right: 180px;
+        font-weight: bold;
+        font-size: 22px;
+        color: #000;
+        font-variant: small-caps;
+    }
+    .formulaire h1{
+        font-weight: bold;
+        font-size: 22px;
+        color: #000;
+        font-variant: small-caps;
+    }
+    .formulaire pre{
+        color: gray;
+        position: absolute;
+        top: 50px;
+        right: 190px;
+        font-size: 22px;
+        font-weight: bold;
+        font-variant: small-caps;
+    }
+    .formulaire pre:hover{
+        background-color: #333;
+        padding: 2px;
+        color: #eee;
+    }
+    .formulaire aside{
+        background-color: #333;
+        width: 21%;
+        height: 25vh;
+        position: absolute;
+        right: 180px;
+        top: 230px;
+    }
+    .formulaire .blanche{
+        position: absolute;
+        top: 200px;
+        background-color: blue;
+        text-align: center;
+        font-variant: small-caps;
+        font-size: large;
+        border:  1px groove black;
+        padding: 3px;
+        color: white;
+    }
+    .formulaire .blanche1{
+        position: absolute;
+        top: 170px;
+        background-color: orangered;
+        text-align: center;
+        font-variant: small-caps;
+        font-size: large;
+        border:  1px groove black;
+        padding: 6px;
+        color: white;
+    }
+    .formulaire .chocolat{
+        position: absolute;
+        top: 230px;
+        background-color: #333;
+        text-align: center;
+        font-variant: small-caps;
+        font-size: large;
+        border:  1px groove black;
+        color: white;
+    }
+    .pieddepage{
+        color: #000;
+        background-color: rgb(223, 219, 219);
+        opacity: 0.7;
+        width: 100%;
+        height: 25vh;
+    }
+    .pieddepage blockquote{
+        position: absolute;
+        font-size: large;
+        font-weight: bold;
+        font-variant: small-caps;
+    }
+    .pieddepage i{
+        position: absolute;
+        top: 495px;
+        right: 500px;
+        font-size: 22px;
+        
+    }
+    .pieddepage b{
+        color: gray;
+        position: absolute;
+        right: 358px;
+        top: 500px;
+    }
+    .pieddepage strong{
+        color: gray;
+        position: absolute;
+        right: 130px;
+        top: 500px;
+    }
+    .formulaire video{
+        position: absolute;top: 20px; opacity: 0.4; width: 350px; z-index: 0; right: 260px;
+         height: 350px;
+    }
+    
+    </style>
+</head>
+<body>
+<div class="block">
+    <header class="titre">
+        <h1>SPORTS</h1>
+    </header>
+    <section class="liens" data-aos="fade-right">
+        <ul>
+            <li><a href="" style="color: orange;" id="A">ACCEUIL</a></li>
+            <li><a href="" id="B">MESSAGES</a></li>
+            <li><a href="" id="C">CLASSES</a></li>
+            <li><a href="" id="D">HORAIRE</a></li>
+            <li><a href="" id="E">CONTACT</a></li>
+        </ul>
+    </section>
+    <section class="icons" data-aos="fade-left">
+        <ul>
+            <li><a href=""><i class="fab fa-facebook"></i></a></li>
+            <li><a href=""><i class="fab fa-twitter"></i></a></li>
+            <li><a href="" style="background-color: red;"><i class="fab fa-instagram"></i></a></li>
+        </ul>
+
+    </section>
+</div>
+
+    <section class="message" data-aos="fade-up">
+        <samp>Nouvelle maniere de construire un style de vie</samp>
+        <pre>
+            <h2>
+                Ameliorez votre corps avec 
+                  beaucoup des physiques
+            </h2>
+        </pre>
+    </section>
+
+   
+    <div class="video">
+        <video src="video/singula.mp4" autoplay loop muted></video>
+        <aside class="liensOR" data-aos="fade-up">
+            <ul>
+                <li><a href="commence.html"><div class="conteneur">Commencez</div></a></li>
+                <li><a href="apprendre.html" style="border: 5px solid orange; padding: 10px; color: orangered;">Apprenez plus</a></li>
+            </ul>
+            
+        </aside>
+    </div>
+    
+    <div class="arrangement" data-aos="fade-up">
+        <h1 data-aos="fade-right">Nouveau au sport</h1>
+        <pre class="texte1" data-aos="fade-left"> 
+            Votre adhesion est pour 2 mois gratuite ($10) pour 1 mois !
+            <button data-aos="fade-right" onclick="make()" id="dv">INSCRIVEZ - VOUS</button>
+        </pre>
+        <hr>
+        <h2 data-aos="fade-up">HEURES</h2>
+        <pre class="texte2" data-aos="fade-up"> 
+            Dimanche: pas de job
+
+            Lundi - jeudi
+            <code style="color: gray;">7:00AM - 10:00 PM</code>
+            Samedi
+
+            <ins style="color: gray;">6:00AM - 16:00 PM</ins>
+
+        </pre>
+    </div>
+    <div class="apprendre">
+        <h2>Salut, nous sommes sportif</h2>
+        <pre>
+            <p>
+                vous etes autorisez de redistribue ce site
+                vous pouvez aussi telechargez des trucs...
+                auquel vous en aurez besoin sur le site de
+                collecte de modele sportif.
+
+                vous etes permis d'utiliser ce modele pour
+                vos besoin personnels ou sites d'affaire... 
+                <mark>conctactez-nous en cas des problemes !</mark>
+
+            </p>
+            <div class="image">
+                <img src="image/sport (1).jpg" width="200" alt="">
+                <img src="image/soulier.jpg" width="200" alt="">
+            </div>
+            <div class="nameIMAGE1" style="color: white; font-variant:small-caps; font-size:large;">SPORT <i class="fab fa-facebook" style="background: blue;"></i> 
+
+yoga introductor<i class="fab fa-instagram" style="background: red;"></i></div>
+       <div class="nameIMAGE2"style="color: white; font-variant:small-caps; font-size:large;">SOULIER <i class="fab fa-instagram" style="background: red;"></i>
+
+pour le job<i class="fab fa-facebook" style="background: blue;"></i></div>
+        </pre>
+       
+    </div>
+    <div class="talent" style="background-color: #3f3f3f; position: absolute; top: 1417px ">
+        <h2 style="color: #fff6f6; text-align:center">Ingerez un corps parfait</h2>
+        <h1 style="color: black; text-align:center">Nos cours de formation</h1>
+        <img src="#" alt="class" style="position: absolute; left: 1000px">
+        <img src="#" alt="class" style="position: absolute; left: 500px">
+        <img src="#" alt="class">
+        <div class="T1">YOGA <p style="color: white;">entraineur<pre style="color: rgb(53, 2, 2);">VICTOIRE</pre></p> <div class="box" style="position: absolute; top: 148px">50$</div></div>
+        <div class="T2">COURSE <p style="color: white;">entraineur<pre style="color: rgb(53, 2, 2);">SHILLA</pre></p> <div class="box">70$</div></div>
+        <div class="T3">BASKET BALL <p style="color: white;">entraineur<pre style="color: rgb(53, 2, 2);">RODRIGUE</pre></p><div class="box">90$</div></div>
+    </div>
+    <div class="tableau">
+        <table border="1" width="400">
+            <h1></h1>
+            <caption>un calendrier d'entrainement</caption>
+            <thead>
+                <tr>
+                    <th><img src="image/david.jpg" width="50" height="50" alt=""></th>
+                    <th>LUNDI</th>
+                    <th>MARDI</th>
+                    <th>MERCREDI</th>
+                    <th>JEUDI</th>
+                    <th>VENDREDI</th>
+                    <th>SAMEDI</th>
+                </tr>
+                <tr>
+                    <td style="background-color: blue;">7:00</td>
+                    <td></td>
+                    <td>course</td>
+                    <td></td>
+                    <td>yoga</td>
+                    <td>yoga</td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td style="background-color: blue;">9h:00</td>
+                    <td>course</td>
+                    <td></td>
+                    <td></td>
+                    <td>yoga</td>
+                    <td></td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td style="background-color: blue;">11h00</td>
+                    <td></td>
+                    <td>yoga</td>
+                    <td>basket-ball</td>
+                    <td>basket-ball</td>
+                    <td></td>
+                    <td>course</td>
+                </tr>
+                <tr>
+                    <td style="background-color: blue;">15h00</td>
+                    <td>cours</td>
+                    <td>basket-ball</td>
+                    <td>basket-ball</td>
+                    <td>basket-ball</td>
+                    <td>course</td>
+                    <td>yoga</td>
+                </tr>
+            </thead>
+        </table>
+    </div>
+    <div class="formulaire">
+        <h1>sentez libres a solliciter riens</h1>
+        <h2>ou vous pouvez nous depister</h2>
+        <div><input type="text" placeholder="Nom"></div>
+        <div><input type="email" placeholder="Email"></div>
+        <div><textarea name="#" id="$" placeholder="Messages" rows="10" cols="60"></textarea></div>
+        <button>envoyez un message</button>
+        <pre>enregistrez-vous chez nova-teck</pre>
+        <aside class="blanche1">NOM</aside>
+        <aside class="blanche">EMAIL</aside>
+        <aside class="chocolat">MESSAGES</aside>
+        <video src="video/flavorever.mp4" autoplay loop muted></video>
+        <div class="pieddepage">
+            <footer><blockquote>Copiedroite © 2024 Sport life pour nova teck wesh !.</blockquote></footer>
+            <a href=""><i class="fab fa-whatsapp" style=" background: green; color: white;padding: 2px;"></i></a>
+            <b>+243 995 391 926</b>
+            <a href=""><i class="fab fa-tiktok" style="position: absolute; right: 300px; background: black; color: white;padding: 2px;"></i></a>
+            <strong>davidmak@Gamil.com</strong>
+        </div>
+    </div>
+<script src="source/aos-next/aos.js"></script>
+<script>AOS.init();</script>
+<script>
+    const dv=document.getElementById("dv")
+    function make(){
+        const cas=prompt("entrez votre Email")
+        const user_cas=cas
+        const cas2=prompt("tapez le mot de passe du site !")
+        const user_cas2="SPORT"
+        if(cas===user_cas && cas2===user_cas2){
+            alert("vous avez le droit d'utilisez alors notre site internet !")
+        }else{
+            alert("impossible!")
+        }
+    }
+</script>
+</body>
+</html>

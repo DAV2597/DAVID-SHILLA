@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .arrangement{background: black; width: 101%; height: 100vh;position: absolute; top: 0px; margin-left: -10px}
+        hr{margin-top: 90px;}
+        .arrangement h1{text-align: center; color: white;}
+        .texte1{text-align: center; font-size: 20px; color: gray; margin-left: -120px; }
+        .texte1 button{position: absolute; top: 170px; left: 450px; width: 40%; padding: 20px; background-color: orangered;border-top-left-radius: 40px; border-bottom-right-radius: 40px;}
+        .arrangement h2{text-align: center; color: white;}
+        .texte2{text-align: center; margin-left: -140px; font-size: 20px; color: #eee;}
+    </style>
+</head>
+<body>
+    <div class="arrangement" data-aos="fade-up">
+        <h1 data-aos="fade-right">Nouveau au sport</h1>
+        <pre class="texte1" data-aos="fade-left"> 
+            Votre adhesion est pour 2 mois gratuite ($10) pour 1 mois !
+            <button data-aos="fade-right" onclick="make()" id="dv">INSCRIVEZ - VOUS</button>
+        </pre>
+        <hr>
+        <h2 data-aos="fade-up">HEURES</h2>
+        <pre class="texte2" data-aos="fade-up"> 
+            Dimanche: pas de job
+
+            Lundi - jeudi
+            <code style="color: gray;">7:00AM - 10:00 PM</code>
+            Samedi
+
+            <ins style="color: gray;">6:00AM - 16:00 PM</ins>
+
+        </pre>
+    </div>
+    <script>
+        const dv=document.getElementById("dv")
+        function make(){
+            const cas=prompt("entrez votre Email")
+            const user_cas=cas
+            const cas2=prompt("creer votre propres mot de passe !")
+            const user_cas2="SPORT"
+            if(cas===user_cas && cas2===user_cas2){
+                alert("vous avez le droit d'utilisez alors notre site internet !")
+            }else{
+                print("imprimer la page !")
+            }
+        }
+    </script>
+</body>
+</html>
